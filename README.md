@@ -10,8 +10,6 @@ Built on top of [TailAdmin](https://tailadmin.com/) dashboard template with cust
 
 ## 🚀 Quick Start
 
-**New to this project?** Start here: [START_HERE.md](./START_HERE.md)
-
 **Setup in 5 minutes:**
 ```bash
 git clone https://github.com/Satria-001/Workforce-System-.git
@@ -46,7 +44,6 @@ Login: `admin` / `password` at http://localhost:8000/signin
 * 📦 **Vite** - Fast build system with HMR
 * 🔒 **Security First** - Rate limiting, input validation, session management
 * 2️⃣ **Two-Factor Auth** - Optional 2FA for enhanced security
-* 📝 **Well Documented** - Setup guides, API docs, and collaboration guidelines
 
 ---
 
@@ -124,8 +121,6 @@ This project implements enterprise-grade security:
 ✅ **Two-Factor Auth** - Optional 2FA support
 ✅ **SQL Injection Prevention** - Eloquent ORM
 
-**See [SECURITY_AUDIT.md](./SECURITY_AUDIT.md) for details**
-
 ---
 
 ## 🧪 Testing
@@ -181,8 +176,6 @@ We use Git Flow for collaboration:
 4. Push & create PR
 5. Get reviewed & merge
 
-**See [COLLABORATION.md](./COLLABORATION.md) for detailed guidelines**
-
 ---
 
 ## 🚀 Deployment
@@ -232,16 +225,14 @@ npm cache clean --force
 npm install
 ```
 
-**More help?** See [SETUP_GUIDE.md](./SETUP_GUIDE.md#troubleshooting)
-
 ---
 
 ## 📞 Support
 
-- Check documentation files in repo
-- Review [COLLABORATION.md](./COLLABORATION.md) for team guidelines
 - Check logs: `storage/logs/laravel.log`
 - Run: `php artisan about` for diagnostics
+- Review code in repository
+- Ask team members for help
 
 ---
 
