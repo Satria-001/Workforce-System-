@@ -62,19 +62,7 @@ Or use [Laragon](https://laragon.org/) (all-in-one)
 
 ---
 
-## 📚 Documentation
-
-| Document | Purpose | For Whom |
-|----------|---------|----------|
-| [START_HERE.md](./START_HERE.md) | Quick setup & commands | New team members |
-| [SETUP_GUIDE.md](./SETUP_GUIDE.md) | Detailed setup & troubleshooting | Developers |
-| [COLLABORATION.md](./COLLABORATION.md) | Git workflow & best practices | All developers |
-| [FOR_TEAM.md](./FOR_TEAM.md) | Team summary & checklist | Team leads |
-| [SECURITY_AUDIT.md](./SECURITY_AUDIT.md) | Security implementation details | Security reviewers |
-
----
-
-## 👥 Test Users
+##  Test Users
 
 After seeding, login with these credentials:
 
