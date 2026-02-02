@@ -1,420 +1,269 @@
-# TailAdmin Laravel - Tailwind CSS Free Laravel Dashboard
+# 🏢 Workforce System
 
-**TailAdmin Laravel** is a modern, production-ready admin dashboard template powered by **Laravel 12**, **Tailwind CSS v4**, **Alpine.js**, and a clean, modular architecture. TailAdmin is one of the most popular Tailwind CSS dashboard now also available for Larvael. It’s designed for building fast, scalable admin panels, CRM dashboards, SaaS backends, and any data-driven application where clarity and performance matter.
-![TailAdmin - Next.js Dashboard Preview](./tailadmin-laravel.png)
+**Workforce System** is a modern, production-ready workforce management platform built with **Laravel 12**, **Tailwind CSS v4**, and **Alpine.js**. Designed for managing employees, attendance tracking, ticketing system, and real-time activity monitoring with a clean, intuitive interface.
 
+Built on top of [TailAdmin](https://tailadmin.com/) dashboard template with custom authentication, security, and business logic.
 
-## Quick Links
+![Workforce System Dashboard Preview](./tailadmin-laravel.png)
 
-* [✨ Get TailAdmin Laravel](https://tailadmin.com/laravel)
-* [📄 Documentation](https://tailadmin.com/docs)
-* [⬇️ Download](https://tailadmin.com/download)
-* [🌐 Live Demo](https://laravel-demo.tailadmin.com)
+---
 
-Here’s a tighter, more search-friendly version that highlights value and avoids fluff while keeping your structure intact.
+## 🚀 Quick Start
 
-## ✨ Key Features
+**New to this project?** Start here: [START_HERE.md](./START_HERE.md)
 
-* 🚀 **Laravel 12 Core** - Built on the latest Laravel release with improved routing, security, and Blade templating
-* 🎨 **Tailwind CSS v4** - Utility-first styling for rapid, consistent UI development
-* ⚡ **Alpine.js Interactivity** - Lightweight reactivity without a heavy JavaScript framework
-* 📦 **Vite Build System** - Fast dev server, instant HMR, and optimized production builds
-* 📱 **Fully Responsive Layouts** - Smooth, mobile-first design that adapts across all screen sizes
-* 🌙 **Built-in Dark Mode** - Ready-to-use modern dark theme for better usability and aesthetics
-* 📊 **Advanced UI Components** - Charts, data tables, forms, calendars, modals, and reusable blocks for complex dashboards
-* 🎯 **Production-Ready Dashboard UI** - Clean, modern interface crafted for real apps, not placeholder demos
+**Setup in 5 minutes:**
+```bash
+git clone https://github.com/Satria-001/Workforce-System-.git
+cd Workforce-System-
+composer install && npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate && php artisan db:seed
+php artisan serve
+```
 
-### Other Versions
+Login: `admin` / `password` at http://localhost:8000/signin
 
-- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
-- [React.js Version](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
-- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
-- [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
-- [Laravel Version](https://github.com/TailAdmin/tailadmin-laravel)
+---
+
+## ✨ Features
+
+### Core Features
+* 🔐 **Secure Authentication** - Custom signin with rate limiting & CSRF protection
+* 👥 **Multi-Role System** - Admin & Technician roles with RBAC
+* 📊 **Employee Management** - Track employees, departments, and positions
+* 📅 **Attendance Tracking** - Real-time attendance & GPS tracking
+* 🎫 **Ticket System** - Support ticket management & resolution tracking
+* 📈 **Reports & Analytics** - Dashboard with charts, statistics, and insights
+* 📱 **Responsive Design** - Mobile-friendly interface for all devices
+* 🌙 **Dark Mode Support** - Modern dark theme for better usability
+
+### Technical Features
+* 🚀 **Laravel 12** - Latest Laravel with improved performance
+* 🎨 **Tailwind CSS v4** - Utility-first responsive design
+* ⚡ **Alpine.js** - Lightweight interactivity
+* 📦 **Vite** - Fast build system with HMR
+* 🔒 **Security First** - Rate limiting, input validation, session management
+* 2️⃣ **Two-Factor Auth** - Optional 2FA for enhanced security
+* 📝 **Well Documented** - Setup guides, API docs, and collaboration guidelines
+
+---
 
 ## 📋 Requirements
-To set up TailAdmin Laravel, make sure your environment includes:
 
 * **PHP 8.2+**
-* **Composer** (PHP dependency manager)
-* **Node.js 18+** and **npm** (for compiling frontend assets)
-* **Database** - Works with SQLite (default), MySQL, or PostgreSQL
+* **MySQL 8.0+**
+* **Composer**
+* **Node.js 16+** & **npm**
+* **Git**
 
-### Tailwind CSS Laravel Dashboard
+Or use [Laragon](https://laragon.org/) (all-in-one)
 
-TailAdmin delivers a refined Tailwind CSS Laravel Dashboard experience, combining Laravel’s robust backend with Tailwind’s flexible utility classes. The result is a clean, fast, and customizable dashboard that helps developers build modern admin interfaces without the usual front-end complexity. It’s ideal for teams looking for a Tailwind-powered Laravel starter that stays lightweight and easy to scale.
+---
 
-### Laravel Admin Dashboard
+## 📚 Documentation
 
-If you’re searching for a dependable Laravel Admin Dashboard template that’s easy to set up and ready for production, TailAdmin fits the job. It offers a polished UI, reusable components, optimized performance, and all the essentials needed to launch dashboards, CRM systems, and internal tools quickly. It gives developers a solid foundation, so projects move faster with fewer decisions to worry about.
+| Document | Purpose | For Whom |
+|----------|---------|----------|
+| [START_HERE.md](./START_HERE.md) | Quick setup & commands | New team members |
+| [SETUP_GUIDE.md](./SETUP_GUIDE.md) | Detailed setup & troubleshooting | Developers |
+| [COLLABORATION.md](./COLLABORATION.md) | Git workflow & best practices | All developers |
+| [FOR_TEAM.md](./FOR_TEAM.md) | Team summary & checklist | Team leads |
+| [SECURITY_AUDIT.md](./SECURITY_AUDIT.md) | Security implementation details | Security reviewers |
 
-### Check Your Environment
+---
 
-Verify your installations:
+## 👥 Test Users
 
-```bash
-php -v
-composer -V
-node -v
-npm -v
-```
+After seeding, login with these credentials:
 
-## 🚀 Quick Start Installation
+| Role | Username | Password | Access |
+|------|----------|----------|--------|
+| Admin | `admin` | `password` | `/admin/dashboard` |
+| Technician | `budi` | `password` | `/app/dashboard` |
+| Technician | `siti` | `password` | `/app/dashboard` |
+| Technician | `ahmad` | `password` | `/app/dashboard` |
+| Technician | `rina` | `password` | `/app/dashboard` |
+| Technician | `dedi` | `password` | `/app/dashboard` |
 
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/TailAdmin/tailadmin-laravel.git
-cd tailadmin-laravel
-```
-
-### Step 2: Install PHP Dependencies
-
-```bash
-composer install
-```
-
-This command will install all Laravel dependencies defined in `composer.json`.
-
-### Step 3: Install Node.js Dependencies
-
-```bash
-npm install
-```
-
-Or if you prefer yarn or pnpm:
-
-```bash
-# Using yarn
-yarn install
-
-# Using pnpm
-pnpm install
-```
-
-### Step 4: Environment Configuration
-
-Copy the example environment file:
-
-```bash
-cp .env.example .env
-```
-
-**For Windows users:**
-
-```bash
-copy .env.example .env
-```
-
-**Or create it programmatically:**
-
-```bash
-php -r "file_exists('.env') || copy('.env.example', '.env');"
-```
-
-### Step 5: Generate Application Key
-
-```bash
-php artisan key:generate
-```
-
-This creates a unique encryption key for your application.
-
-### Step 6: Configure Database
-
-#### Option A: Using MySQL/PostgreSQL
-
-Update your `.env` file with your database credentials:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=tailadmin_db
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-```
-
-Create the database:
-
-```bash
-# MySQL
-mysql -u root -p -e "CREATE DATABASE tailadmin_db;"
-
-# PostgreSQL
-createdb tailadmin_db
-```
-
-Run migrations:
-
-```bash
-php artisan migrate
-```
-
-### Step 7: (Optional) Seed the Database
-
-If you want sample data:
-
-```bash
-php artisan db:seed
-```
-
-### Step 8: Storage Link
-
-Create a symbolic link for file storage:
-
-```bash
-php artisan storage:link
-```
-
-## 🏃 Running the Application
-
-### Development Mode (Recommended)
-
-The easiest way to start development is using the built-in script:
-
-```bash
-composer run dev
-```
-
-This single command starts:
-- ✅ Laravel development server (http://localhost:8000)
-- ✅ Vite dev server for hot module reloading
-- ✅ Queue worker for background jobs
-- ✅ Log monitoring
-
-**Access your application at:** [http://localhost:8000](http://localhost:8000)
-
-### Manual Development Setup
-
-If you prefer to run services individually in separate terminal windows:
-
-**Terminal 1 - Laravel Server:**
-```bash
-php artisan serve
-```
-
-**Terminal 2 - Frontend Assets:**
-```bash
-npm run dev
-```
-
-### Building for Production
-
-#### Build Frontend Assets
-
-```bash
-npm run build
-```
-
-#### Optimize Laravel
-
-```bash
-# Clear and cache configuration
-php artisan config:cache
-
-# Cache routes
-php artisan route:cache
-
-# Cache views
-php artisan view:cache
-
-# Optimize autoloader
-composer install --optimize-autoloader --no-dev
-```
-
-#### Production Environment
-
-Update your `.env` for production:
-
-```env
-APP_ENV=production
-APP_DEBUG=false
-APP_URL=https://yourdomain.com
-```
-
-
-## 🧪 Testing
-
-Run the test suite using Pest:
-
-```bash
-composer run test
-```
-
-Or manually:
-
-```bash
-php artisan test
-```
-
-Run with coverage:
-
-```bash
-php artisan test --coverage
-```
-
-Run specific tests:
-
-```bash
-php artisan test --filter=ExampleTest
-```
-
-## 📜 Available Commands
-
-### Composer Scripts
-
-```bash
-# Start development environment
-composer run dev
-
-# Run tests
-composer run test
-
-# Code formatting (if configured)
-composer run format
-
-# Static analysis (if configured)
-composer run analyze
-```
-
-### NPM Scripts
-
-```bash
-# Start Vite dev server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Lint JavaScript/TypeScript
-npm run lint
-
-# Format code
-npm run format
-```
-
-### Artisan Commands
-
-```bash
-# Start development server
-php artisan serve
-
-# Run migrations
-php artisan migrate
-
-# Rollback migrations
-php artisan migrate:rollback
-
-# Fresh migrations with seeding
-php artisan migrate:fresh --seed
-
-# Generate application key
-php artisan key:generate
-
-# Clear all caches
-php artisan optimize:clear
-
-# Cache everything for production
-php artisan optimize
-
-# Create symbolic link for storage
-php artisan storage:link
-
-# Start queue worker
-php artisan queue:work
-
-# List all routes
-php artisan route:list
-
-# Create a new controller
-php artisan make:controller YourController
-
-# Create a new model
-php artisan make:model YourModel -m
-
-# Create a new migration
-php artisan make:migration create_your_table
-```
+---
 
 ## 📁 Project Structure
 
 ```
-tailadmin-laravel/
-├── app/                    # Application logic
-│   ├── Http/              # Controllers, Middleware, Requests
-│   ├── Models/            # Eloquent models
-│   └── Providers/         # Service providers
-├── bootstrap/             # Framework bootstrap files
-├── config/                # Configuration files
-├── database/              # Migrations, seeders, factories
-│   ├── migrations/
-│   ├── seeders/
-│   └── factories/
-├── public/                # Public assets (entry point)
-│   ├── build/            # Compiled assets (generated)
-│   └── index.php         # Application entry point
-├── resources/             # Views and raw assets
-│   ├── css/              # Stylesheets (Tailwind)
-│   ├── js/               # JavaScript files (Alpine.js)
-│   └── views/            # Blade templates
-├── routes/                # Route definitions
-│   ├── web.php           # Web routes
-│   ├── api.php           # API routes
-│   └── console.php       # Console routes
-├── storage/               # Logs, cache, uploads
-│   ├── app/
-│   ├── framework/
-│   └── logs/
-├── tests/                 # Pest test files
-│   ├── Feature/
-│   └── Unit/
-├── .env.example           # Example environment file
-├── artisan                # Artisan CLI
-├── composer.json          # PHP dependencies
-├── package.json           # Node dependencies
-├── vite.config.js         # Vite configuration
-└── tailwind.config.js     # Tailwind configuration
+Workforce-System/
+├── app/
+│   ├── Http/Controllers/Auth/    # Authentication
+│   ├── Http/Middleware/           # Custom middlewares
+│   ├── Models/                    # Eloquent models
+│   └── Providers/                 # Service providers
+├── config/
+│   ├── fortify.php               # 2FA config
+│   └── auth.php                  # Auth config
+├── database/
+│   ├── migrations/                # DB schema
+│   └── seeders/                   # Test data
+├── resources/
+│   ├── views/
+│   │   ├── admin/                # Admin pages
+│   │   ├── mobile/               # Mobile pages
+│   │   ├── auth/                 # Login/signup
+│   │   └── layouts/              # Base layouts
+│   ├── css/                       # Stylesheets
+│   └── js/                        # JavaScript
+├── routes/
+│   ├── web.php                    # Main routes
+│   ├── admin.php                  # Admin routes
+│   └── app.php                    # Technician routes
+├── storage/                       # Logs, uploads
+├── tests/                         # Test cases
+└── .env.example                   # Env template
 ```
 
-## 🐛 Troubleshooting
+---
 
-### Common Issues
+## 🔐 Security
 
-#### "Class not found" errors
+This project implements enterprise-grade security:
+
+✅ **Rate Limiting** - Prevents brute force attacks (5 attempts/min per user)
+✅ **CSRF Protection** - Token validation on all forms
+✅ **Password Security** - Bcrypt hashing with 12 rounds
+✅ **Session Security** - Regeneration & encryption
+✅ **Role-Based Access** - RBAC middleware
+✅ **Input Validation** - Server & client-side validation
+✅ **Two-Factor Auth** - Optional 2FA support
+✅ **SQL Injection Prevention** - Eloquent ORM
+
+**See [SECURITY_AUDIT.md](./SECURITY_AUDIT.md) for details**
+
+---
+
+## 🧪 Testing
+
 ```bash
-composer dump-autoload
+# Run all tests
+php artisan test
+
+# Run specific test
+php artisan test tests/Feature/ExampleTest.php
+
+# With coverage
+php artisan test --coverage
 ```
 
-#### Permission errors on storage/bootstrap/cache
+Current Status: **3/3 tests passing** ✅
+
+---
+
+## 🛠️ Development Commands
+
 ```bash
-chmod -R 775 storage bootstrap/cache
+# Database
+php artisan migrate           # Run migrations
+php artisan migrate:fresh     # Reset & seed
+php artisan db:seed          # Seed data
+php artisan db:show          # Show DB info
+
+# Cache
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+
+# Server
+php artisan serve            # Run dev server
+php artisan serve --port=8001  # Custom port
+
+# Tests
+php artisan test
+npm run dev                  # Dev with HMR
+npm run build              # Production build
 ```
 
-#### NPM build errors
+---
+
+## 🤝 Contributing
+
+We use Git Flow for collaboration:
+
+1. Create feature branch: `feature/nama-fitur`
+2. Make changes & test locally
+3. Commit with meaningful messages
+4. Push & create PR
+5. Get reviewed & merge
+
+**See [COLLABORATION.md](./COLLABORATION.md) for detailed guidelines**
+
+---
+
+## 🚀 Deployment
+
+Before production:
+
+- [ ] Set `APP_DEBUG=false`
+- [ ] Set `APP_ENV=production`
+- [ ] Run `php artisan optimize:clear`
+- [ ] Enable HTTPS
+- [ ] Configure security headers
+- [ ] Setup monitoring & logging
+- [ ] Test 2FA functionality
+
+---
+
+## 📦 Tech Stack
+
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| Laravel | 12.26.4 | Backend framework |
+| PHP | 8.3.25 | Server language |
+| MySQL | 8.0.30 | Database |
+| Tailwind CSS | 4.1.12 | Styling |
+| Alpine.js | 3.14.9 | Interactivity |
+| Vite | 7.0.4 | Build tool |
+| Pest | 4.0 | Testing framework |
+
+---
+
+## 🆘 Troubleshooting
+
+**Port already in use?**
 ```bash
-rm -rf node_modules package-lock.json
+php artisan serve --port=8001
+```
+
+**Database connection error?**
+```bash
+# Check .env file
+php artisan db:show
+```
+
+**npm issues?**
+```bash
+npm cache clean --force
 npm install
 ```
 
-#### Clear all caches
-```bash
-php artisan optimize:clear
-```
+**More help?** See [SETUP_GUIDE.md](./SETUP_GUIDE.md#troubleshooting)
 
-#### Database connection errors
-- Check `.env` database credentials
-- Ensure database server is running
-- Verify database exists
+---
 
-## 🔄 Update Log
+## 📞 Support
 
-### [2025-12-29]
-- Added Date Picker in Statistics Chart
+- Check documentation files in repo
+- Review [COLLABORATION.md](./COLLABORATION.md) for team guidelines
+- Check logs: `storage/logs/laravel.log`
+- Run: `php artisan about` for diagnostics
 
-## License
+---
 
-Refer to our [LICENSE](https://tailadmin.com/license) page for more information.
+## 📄 License
+
+This project is open source and available under the MIT License - see the LICENSE file for details.
+
+---
+
+**Built with ❤️ for workforce management**
+
+Last Updated: February 2, 2026
+Repository: https://github.com/Satria-001/Workforce-System-.git
