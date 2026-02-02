@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'role' => \App\Http\Middleware\RoleMiddleware::class,
+        ]);
+        
+        // Redirect unauthenticated users to /signin instead of /login
+        $middleware->redirectGuestsTo('/signin');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
